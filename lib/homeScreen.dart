@@ -4,7 +4,7 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   List<Map<String, dynamic>> list = [
     {
-      "name": "Science",
+      "name": "Photographer",
       "count": "12",
       "type": "(chemical)",
       "word": "Joind",
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       "image": "assets/images/p1.jpeg"
     },
     {
-      "name": "Mobile App",
+      "name": "Eye Image",
       "count": "22",
       "type": "(Flutter)",
       "word": "Joind",
@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
       "image": "assets/images/p2.jpeg"
     },
     {
-      "name": "Math",
+      "name": "Beautiful Girl",
       "count": "32",
       "type": "(IOS)",
       "word": "Joind",
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
       "image": "assets/images/p3.jpeg"
     },
     {
-      "name": "Arabic",
+      "name": "Yhe Sky",
       "count": "14",
       "type": "(Android)",
       "word": "Joind",
