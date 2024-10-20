@@ -5,8 +5,8 @@ class HomeScreen extends StatelessWidget {
   List<Map<String, dynamic>> list = [
     {
       "name": "Photographer",
-      "count": "12",
-      "type": "(chemical)",
+      "count": "1",
+      "type": "(Girl)",
       "word": "Joind",
       "icon":
           const Icon(Icons.comment, color: Color.fromARGB(255, 118, 178, 219)),
@@ -14,16 +14,16 @@ class HomeScreen extends StatelessWidget {
     },
     {
       "name": "Eye Image",
-      "count": "22",
-      "type": "(Flutter)",
+      "count": "2",
+      "type": "(Person)",
       "word": "Joind",
       "icon": const Icon(Icons.home, color: Color.fromARGB(255, 118, 178, 219)),
       "image": "assets/images/p2.jpeg"
     },
     {
       "name": "Beautiful Girl",
-      "count": "32",
-      "type": "(IOS)",
+      "count": "1",
+      "type": "(Girl)",
       "word": "Joind",
       "icon": const Icon(Icons.card_travel,
           color: Color.fromARGB(255, 118, 178, 219)),
@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
     {
       "name": "Yhe Sky",
       "count": "14",
-      "type": "(Android)",
+      "type": "(Space)",
       "word": "Joind",
       "icon": const Icon(Icons.shop_outlined,
           color: Color.fromARGB(255, 118, 178, 219)),
