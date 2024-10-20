@@ -86,6 +86,7 @@ class HomeScreen extends StatelessWidget {
                         ]),
                     child: Row(
                       children: [
+                        // here I don't use Circlarimage because it isn't match wwith the image
                         ClipOval(
                           child: Image.asset(
                             item["image"] ?? "assets/images/Zaguneng.jpg",
