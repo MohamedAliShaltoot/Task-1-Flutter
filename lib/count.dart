@@ -17,12 +17,13 @@ String image;
       body:  SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(top: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              // crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 
+                 const SizedBox(height: 20,),
              ClipOval(
                child: Image.asset(
                                image,
