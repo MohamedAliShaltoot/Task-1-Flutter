@@ -10,8 +10,11 @@ IconData icon;
   @override
   Widget build(BuildContext context) {
     return  Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
         children: [
             Text(name,style: const TextStyle(fontWeight: FontWeight.bold),),
+            const SizedBox(height: 5,),
                        TextField(
                         
                         decoration: InputDecoration(

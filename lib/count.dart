@@ -56,7 +56,7 @@ String image;
                 height: 65,
                 
                 child: const Center(
-                  child: Text("Add Group",style: TextStyle(color: Colors.white,)
+                  child: Text("Add Group",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)
                             ),
                 ),
               
