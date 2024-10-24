@@ -40,18 +40,18 @@ class _HomeScreenState extends State<HomeScreen> {
       "image": "assets/images/p3.jpeg"
     },
     {
-      "name": "The Sky",
+      "name": "The Samurai",
       "count": "14",
-      "type": "(Space)",
+      "type": "(Fighter)",
       "word": "Joind",
       "icon": const Icon(Icons.shop_outlined,
           color: Color.fromARGB(255, 118, 178, 219),size: 32,),
       "image": "assets/images/saa.jpg"
     },
 {
-      "name": "The Samurai",
+      "name": "The Sky",
       "count": "1",
-      "type": "(Fighter)",
+      "type": "(Space)",
       "word": "Joind",
       "icon": const Icon(Icons.solar_power_rounded,
           color: Color.fromARGB(255, 118, 178, 219),size: 32,),
