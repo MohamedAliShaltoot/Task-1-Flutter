@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:task1/customizedTextandLabelText.dart';
+import 'package:task1/photoScreen.dart';
 
 // ignore: must_be_immutable
 class CountScreen extends StatelessWidget {
@@ -27,14 +28,21 @@ String interestes;
               children: [
                 
                  const SizedBox(height: 20,),
-             ClipOval(
-               child: Image.asset(
-                               image,
-                                fit: BoxFit.cover,
-                                width: 190,
-                                height: 190,
+             InkWell(
+              onTap: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context){
+            return  ImageScreen(imageName: name,image: image,);
+              }));
+              },
+               child: ClipOval(
+                 child: Image.asset(
+                                 image,
+                                  fit: BoxFit.cover,
+                                  width: 190,
+                                  height: 190,
+                                ),
                               ),
-                            ),
+             ),
             const SizedBox(height: 50,),
             CustomizedTextandLabelText(hintText:name, icon: Icons.person_4_outlined, name: 'Name'),
               const SizedBox(height: 20,),
