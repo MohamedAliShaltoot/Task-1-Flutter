@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
           return InkWell(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context){
-            return  CountScreen(image:list[index]["image"]);
+            return  CountScreen(image:list[index]["image"],description: list[index]["count"],interestes: list[index]["type"],name: list[index]["name"],);
               }));
             
             },

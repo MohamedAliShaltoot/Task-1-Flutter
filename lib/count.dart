@@ -5,8 +5,11 @@ import 'package:task1/customizedTextandLabelText.dart';
 
 // ignore: must_be_immutable
 class CountScreen extends StatelessWidget {
-   CountScreen({super.key,required this.image});
+   CountScreen({super.key,required this.image,required this.description,required this.interestes,required this.name});
 String image;
+String name;
+String description;
+String interestes;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,14 +36,14 @@ String image;
                               ),
                             ),
             const SizedBox(height: 50,),
-            CustomizedTextandLabelText(hintText: 'Enter name of the group', icon: Icons.person_4_outlined, name: 'Name'),
+            CustomizedTextandLabelText(hintText:name, icon: Icons.person_4_outlined, name: 'Name'),
               const SizedBox(height: 20,),
             
-            CustomizedTextandLabelText(hintText: 'Enter description', icon: Icons.sticky_note_2, name: 'Description'),
+            CustomizedTextandLabelText(hintText: "$description members", icon: Icons.sticky_note_2, name: 'Description'),
                     
             const SizedBox(height: 20,),
             
-            CustomizedTextandLabelText(hintText: 'Enter your Interestes', icon: Icons.sticky_note_2, name: 'Interestes'),
+            CustomizedTextandLabelText(hintText: interestes, icon: Icons.sticky_note_2, name: 'Interestes'),
                     const SizedBox(height: 40,),
             GestureDetector(
               onTap: (){
