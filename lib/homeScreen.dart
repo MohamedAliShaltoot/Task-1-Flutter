@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:task1/count.dart';
 
 // ignore: must_be_immutable
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool isPressed=false;
   List<Map<String, dynamic>> list = [
     {
       "name": "Photographer",
@@ -12,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       "type": "(Girl)",
       "word": "Joind",
       "icon":
-          const Icon(Icons.comment, color: Color.fromARGB(255, 118, 178, 219)),
+          const Icon(Icons.comment, color: Color.fromARGB(255, 118, 178, 219),size: 32,),
       "image": "assets/images/p1.jpeg"
     },
     {
@@ -20,7 +27,7 @@ class HomeScreen extends StatelessWidget {
       "count": "2",
       "type": "(Person)",
       "word": "Joind",
-      "icon": const Icon(Icons.home, color: Color.fromARGB(255, 118, 178, 219)),
+      "icon": const Icon(Icons.home, color: Color.fromARGB(255, 118, 178, 219),size: 32,),
       "image": "assets/images/p2.jpeg"
     },
     {
@@ -29,7 +36,7 @@ class HomeScreen extends StatelessWidget {
       "type": "(Girl)",
       "word": "Joind",
       "icon": const Icon(Icons.card_travel,
-          color: Color.fromARGB(255, 118, 178, 219)),
+          color: Color.fromARGB(255, 118, 178, 219),size: 32,),
       "image": "assets/images/p3.jpeg"
     },
     {
@@ -38,10 +45,37 @@ class HomeScreen extends StatelessWidget {
       "type": "(Space)",
       "word": "Joind",
       "icon": const Icon(Icons.shop_outlined,
-          color: Color.fromARGB(255, 118, 178, 219)),
+          color: Color.fromARGB(255, 118, 178, 219),size: 32,),
+      "image": "assets/images/saa.jpg"
+    },
+{
+      "name": "The Samurai",
+      "count": "1",
+      "type": "(Fighter)",
+      "word": "Joind",
+      "icon": const Icon(Icons.solar_power_rounded,
+          color: Color.fromARGB(255, 118, 178, 219),size: 32,),
       "image": "assets/images/p4.jpeg"
     },
+    {
+      "name": "The Samuraies",
+      "count": "122",
+      "type": "(Fighters)",
+      "word": "Joind",
+      "icon": const Icon(Icons.workspaces_filled,
+          color: Color.fromARGB(255, 118, 178, 219),size: 32,),
+      "image": "assets/images/saa.jpg"
+    },
+
+
+
+
   ];
+
+  //assets/images/samurai.jpg
+  // assets/images/p1.jpeg photographer
+  // assets/images/p3.jpeg beutiful girl
+  //
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,10 +128,10 @@ class HomeScreen extends StatelessWidget {
                       // here I don't use Circlarimage because it isn't match wwith the image
                       ClipOval(
                         child: Image.asset(
-                         list[index]["image"] ?? "assets/images/Zaguneng.jpg",
+                         list[index]["image"] ?? "assets/images/saa.jpg",
                           fit: BoxFit.cover,
-                          width: 120,
-                          height: 120,
+                          width: 140,
+                          height: 140,
                         ),
                       ),
                       const SizedBox(
@@ -134,11 +168,29 @@ class HomeScreen extends StatelessWidget {
                           const SizedBox(
                             height: 5,
                           ),
-                          Text(
-                             list[index]["word"] ?? "",
-                            style: const TextStyle(
-                                fontSize: 20,
-                                color: Color.fromARGB(255, 118, 178, 219)),
+                          InkWell(
+                            onTap: (){
+                              setState(() {
+
+                                if(isPressed){
+                                   list[index]["word"]="Not joined" ;
+                                   isPressed=false;
+
+                                } else {
+                                   list[index]["word"]=" joined" ;
+                                   isPressed=true;
+                                }
+                                 
+                              });
+                              
+                            },
+                            
+                            child: Text(
+                               list[index]["word"] ?? "",
+                              style:  const TextStyle(
+                                  fontSize: 20,
+                                  color:  Color.fromARGB(255, 4, 185, 205)   ),
+                            ),
                           ),
                         ],
                       ),
@@ -162,88 +214,4 @@ class HomeScreen extends StatelessWidget {
               );
            
 }
- 
- // children: [
-            //   ...list.map((item) {
-            //     return Padding(
-            //       padding: const EdgeInsets.only(bottom: 15),
-            //       child: Container(
-            //         padding: const EdgeInsets.symmetric(horizontal: 10),
-            //         height: 150,
-            //         width: double.infinity,
-            //         decoration: BoxDecoration(
-            //             color: Colors.white,
-            //             borderRadius: BorderRadius.circular(10),
-            //             boxShadow: const [
-            //               BoxShadow(
-            //                   color: Colors.grey,
-            //                   offset: Offset(10, 0),
-            //                   blurRadius: 10,
-            //                   spreadRadius: 1),
-            //               BoxShadow(
-            //                   color: Colors.grey,
-            //                   offset: Offset(0, 10),
-            //                   blurRadius: 10,
-            //                   spreadRadius: 1),
-            //             ]),
-            //         child: Row(
-            //           children: [
-            //             // here I don't use Circlarimage because it isn't match wwith the image
-            //             ClipOval(
-            //               child: Image.asset(
-            //                 item["image"] ?? "assets/images/Zaguneng.jpg",
-            //                 fit: BoxFit.cover,
-            //                 width: 120,
-            //                 height: 120,
-            //               ),
-            //             ),
-            //             const SizedBox(
-            //               width: 15,
-            //             ),
-
-            //             Column(
-            //               crossAxisAlignment: CrossAxisAlignment.start,
-            //               mainAxisAlignment: MainAxisAlignment.center,
-            //               children: [
-            //                 Text(
-            //                   item["name"] ?? "",
-            //                   style: const TextStyle(
-            //                       fontWeight: FontWeight.bold, fontSize: 20),
-            //                 ),
-            //                 const SizedBox(
-            //                   height: 5,
-            //                 ),
-            //                 Text(
-            //                   "${item["count"]} members",
-            //                   style: const TextStyle(
-            //                       fontSize: 20,
-            //                       color: Color.fromARGB(255, 121, 131, 134)),
-            //                 ),
-            //                 const SizedBox(
-            //                   height: 5,
-            //                 ),
-            //                 Text(
-            //                   item["type"] ?? "",
-            //                   style: const TextStyle(
-            //                       fontSize: 20,
-            //                       color: Color.fromARGB(255, 121, 131, 134)),
-            //                 ),
-            //                 const SizedBox(
-            //                   height: 5,
-            //                 ),
-            //                 Text(
-            //                   item["word"] ?? "",
-            //                   style: const TextStyle(
-            //                       fontSize: 20,
-            //                       color: Color.fromARGB(255, 118, 178, 219)),
-            //                 ),
-            //               ],
-            //             ),
-            //             const Spacer(),
-            //             item["icon"],
-            //             const SizedBox(
-            //               width: 20,
-            //             ),
-            //             //Icon(item["icon"]?? const Icon(Icons.abc),color: Colors.black,)
-            //           ],
 }
