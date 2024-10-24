@@ -31,8 +31,8 @@ String interestes;
                child: Image.asset(
                                image,
                                 fit: BoxFit.cover,
-                                width: 150,
-                                height: 150,
+                                width: 190,
+                                height: 190,
                               ),
                             ),
             const SizedBox(height: 50,),
