@@ -226,19 +226,91 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       drawer: Drawer(
         child: ListView(
-          children:  [
+          children: [
             UserAccountsDrawerHeader(
-             // arrowColor: Colors.white,
+              // arrowColor: Colors.white,
               accountName: const Text("User Account"),
               accountEmail: const Text("User@gmail.com"),
               currentAccountPicture: ClipOval(
-               // backgroundColor: Colors.amber,
-                child: Image.asset("assets/images/saa.jpg",
-                      fit: BoxFit.cover,
-                      width: 140,
-                      height: 140,),
+                // backgroundColor: Colors.amber,
+                child: Image.asset(
+                  "assets/images/saa.jpg",
+                  fit: BoxFit.cover,
+                  width: 140,
+                  height: 140,
+                ),
               ),
-            )
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.home,
+                color: Colors.black,
+              ),
+              title: const Text("Home"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.settings,
+                color: Colors.black,
+              ),
+              title: const Text("Settings"),
+              onTap: () {},
+              trailing: const Icon(
+                Icons.arrow_right,
+                color: Colors.black,
+              ) ,
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.dataset,
+                color: Colors.black,
+              ),
+              title: const Text("Dates"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.support_agent,
+                color: Colors.black,
+              ),
+              title: const Text("Support&Help"),
+              onTap: () {},
+              trailing: const Icon(
+                Icons.arrow_right,
+                color: Colors.black,
+              ) ,
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.question_answer,
+                color: Colors.black,
+              ),
+              title: const Text("About US"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.contact_page,
+                color: Colors.black,
+              ),
+              title: const Text("Contacts"),
+              onTap: () {},
+            ),
+            const Divider(
+              color: Color.fromARGB(255, 18, 17, 12),
+              thickness: 2,
+              indent: 1,
+            ),
+ ListTile(
+              leading: const Icon(
+                Icons.logout,
+                color: Colors.black,
+              ),
+              title: const Text("LogOut"),
+              onTap: () {},
+            ),
+
           ],
         ),
       ),
