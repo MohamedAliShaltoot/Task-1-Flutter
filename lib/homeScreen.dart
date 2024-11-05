@@ -2,9 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:task1/count.dart';
 
+
 // ignore: must_be_immutable
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -255,7 +256,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.black,
               ),
               title: const Text("Settings"),
-              onTap: () {},
+              onTap: () {
+                const SnackBar(content: Text("You taped"),
+                backgroundColor: Colors.amber,
+                
+                
+                
+                );
+              },
               trailing: const Icon(
                 Icons.arrow_right,
                 color: Colors.black,
@@ -314,6 +322,26 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(backgroundColor: Color.fromARGB(255, 168, 143, 66),items: const [
+
+
+        BottomNavigationBarItem(
+          activeIcon: Icon(Icons.home),
+        
+        icon: Icon(Icons.home),label: 'Home',tooltip: "Home",backgroundColor: Color.fromARGB(255, 168, 143, 66),),
+
+ BottomNavigationBarItem(icon: Icon(Icons.person),label: 'person',backgroundColor: Color.fromARGB(255, 74, 63, 32),tooltip: "person",),
+
+ 
+
+   BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'settings',tooltip: "settings"),
+    
+
+
+
+
+
+      ]),
     );
   }
 }
