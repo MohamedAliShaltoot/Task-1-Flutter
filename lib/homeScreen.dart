@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int index=1;
   bool isPressed = false;
   List<Map<String, dynamic>> list = [
     {
@@ -108,7 +109,8 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.white,
           )
         ],
-        backgroundColor: Colors.blue,
+        backgroundColor: //Colors.blue,
+        const Color.fromARGB(255, 3, 70, 133)
       ),
       body: ListView.separated(
         itemCount: list.length,
@@ -230,8 +232,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             UserAccountsDrawerHeader(
               // arrowColor: Colors.white,
-              accountName: const Text("User Account"),
-              accountEmail: const Text("User@gmail.com"),
+              accountName: const Text("Samurai Account"),
+              accountEmail: const Text("Samurai2356@gmail.com"),
               currentAccountPicture: ClipOval(
                 // backgroundColor: Colors.amber,
                 child: Image.asset(
@@ -322,13 +324,27 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(backgroundColor: Color.fromARGB(255, 168, 143, 66),items: const [
+      bottomNavigationBar: BottomNavigationBar(
+        useLegacyColorScheme: false,
+        currentIndex: index,
+        onTap: (value) {
+          setState(() {
+              index=value;
+          });
+          
+        },
+        selectedFontSize: 20,
+        unselectedFontSize: 15,
+        iconSize: 20,
+        selectedItemColor: const Color.fromARGB(255, 224, 221, 221),
+        unselectedItemColor: const Color.fromARGB(255, 4, 232, 50),
+        backgroundColor: const Color.fromARGB(255, 1, 51, 97),items: const [
 
 
         BottomNavigationBarItem(
           activeIcon: Icon(Icons.home),
         
-        icon: Icon(Icons.home),label: 'Home',tooltip: "Home",backgroundColor: Color.fromARGB(255, 168, 143, 66),),
+        icon: Icon(Icons.home_repair_service),label: 'Home',tooltip: "Home",backgroundColor: Color.fromARGB(255, 168, 143, 66),),
 
  BottomNavigationBarItem(icon: Icon(Icons.person),label: 'person',backgroundColor: Color.fromARGB(255, 74, 63, 32),tooltip: "person",),
 

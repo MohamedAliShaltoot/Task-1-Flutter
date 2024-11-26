@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ImageScreen extends StatelessWidget {
   ImageScreen({super.key, required this.imageName, required this.image});
   String imageName;
